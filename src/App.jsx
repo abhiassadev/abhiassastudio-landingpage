@@ -20,7 +20,7 @@ function App() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch("../data/packages.json")
+    fetch("/data/packages.json")
       .then((result) => result.json())
       .then((data) => setData(data));
   }, []);
