@@ -8,7 +8,7 @@ import {
 } from "@nextui-org/react";
 import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/react";
 import { Accordion, AccordionItem } from "@nextui-org/react";
-import { Chip, Button, Link } from "@nextui-org/react";
+import { Button, Link } from "@nextui-org/react";
 
 import MainNavbar from "./components/MainNavbar";
 import Category from "./components/Category";
@@ -63,7 +63,7 @@ function App() {
                         {data.name}
                       </h1>
                       <h1 className="text-2xl font-bold text-black">
-                        IDR {data.price}/Tahun
+                        {data.price}
                       </h1>
                     </CardHeader>
                     <CardBody className="gap-3">
@@ -185,7 +185,10 @@ function App() {
               ABHIASSA STUDIO
             </h1>
             <div className="flex flex-col gap-5 mt-10 sm:grid sm:grid-cols-2">
-              <Link href="" className="w-full">
+              <Link
+                href="https://tokoonlinebyabhiassa.netlify.app"
+                className="w-full"
+              >
                 <Card className="bg-gradient-to-tr from-blue-500 to-white h-32 w-full shadow-sm sm:w-64">
                   <CardBody className="flex justify-center items-center">
                     <h1 className="text-2xl font-semibold text-white">
@@ -194,7 +197,10 @@ function App() {
                   </CardBody>
                 </Card>
               </Link>
-              <Link href="" className="w-full">
+              <Link
+                href="https://restoranbyabhiassa.netlify.app"
+                className="w-full"
+              >
                 <Card className="bg-gradient-to-tr from-blue-500 to-white h-32 w-full shadow-sm sm:w-64">
                   <CardBody className="flex justify-center items-center">
                     <h1 className="text-2xl font-semibold text-white">
@@ -203,7 +209,10 @@ function App() {
                   </CardBody>
                 </Card>
               </Link>
-              <Link href="" className="w-full">
+              <Link
+                href="https://namelesscommunity.vercel.app"
+                className="w-full"
+              >
                 <Card className="bg-gradient-to-tr from-blue-500 to-white h-32 w-full shadow-sm sm:w-64">
                   <CardBody className="flex justify-center items-center">
                     <h1 className="text-2xl font-semibold text-white">
@@ -256,31 +265,49 @@ function App() {
         <div className="flex flex-col gap-10 sm:grid sm:grid-cols-2">
           <div className="flex flex-col">
             <h1 className="text-lg font-medium text-black">Kontak</h1>
-            <Link href="" className="text-black opacity-80">
+            <Link
+              href="https://wa.me/6283133793060"
+              className="text-black opacity-80"
+            >
               +62 831 3379 3060
             </Link>
-            <Link href="" className="text-black opacity-80">
+            <Link
+              href="mailto:abhiassastudio@gmail.com"
+              className="text-black opacity-80"
+            >
               abhiassastudio@gmail.com
             </Link>
           </div>
           <div className="flex flex-col">
             <h1 className="text-lg font-medium text-black">Media Sosial</h1>
-            <Link href="" className="text-black opacity-80">
+            <Link
+              href="https://www.facebook.com/share/1Ark1bbcTt/"
+              className="text-black opacity-80"
+            >
               Facebook
             </Link>
-            <Link href="" className="text-black opacity-80">
+            <Link
+              href="https://www.instagram.com/abhiassastudio"
+              className="text-black opacity-80"
+            >
               Instagram
             </Link>
-            <Link href="" className="text-black opacity-80">
+            <Link
+              href="https://www.tiktok.com/@abhiassastudio"
+              className="text-black opacity-80"
+            >
               TikTok
             </Link>
           </div>
           <div className="flex flex-col">
             <h1 className="text-lg font-medium text-black">Pembayaran</h1>
-            <Link href="" className="text-black opacity-80">
+            <Link href="https://gopay.co.id" className="text-black opacity-80">
               Gopay
             </Link>
-            <Link href="" className="text-black opacity-80">
+            <Link
+              href="https://www.bankmandiri.co.id"
+              className="text-black opacity-80"
+            >
               M-Banking
             </Link>
           </div>

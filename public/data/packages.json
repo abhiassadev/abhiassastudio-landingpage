@@ -2,13 +2,14 @@
   {
     "id": 1,
     "name": "LANDING PAGE",
-    "price": 269.9,
+    "price": "IDR 269.900/Tahun",
     "banefits": [
       "OTOMATIS ONLINE",
       "1 HALAMAN",
       "TAMPILAN MODERN",
       "DESAIN RESPONSIF 3 PERANGKAT",
       "1 DOMAIN (.com)",
+      "SERTIFIKAT SSL",
       "MOBILE FRENDLY"
     ],
     "redirect_link": "https://wa.me/6283133793060"
@@ -16,13 +17,14 @@
   {
     "id": 1,
     "name": "E-COMMERCE",
-    "price": 369.9,
+    "price": "IDR 369.900/Tahun",
     "banefits": [
       "OTOMATIS ONLINE",
       "3 HALAMAN",
       "TAMPILAN MODERN",
       "DESAIN RESPONSIF 3 PERANGKAT",
       "1 DOMAIN (.com)",
+      "SERTIFIKAT SSL",
       "MOBILE FRENDLY"
     ],
     "features": [
@@ -35,7 +37,7 @@
   },
   {
     "id": 1,
-    "name": "LANDING PAGE",
+    "name": "KUSTOM",
     "price": "MENYESUAIKAN",
     "banefits": [
       "OTOMATIS ONLINE",
@@ -43,9 +45,10 @@
       "REQUST TAMPILAN",
       "REQUEST PERANGKAT RESPONSIF",
       "KUSTOM DOMAIN (.com)",
+      "SERTIFIKAT SSL",
       "MOBILE FRENDLY"
     ],
-    "features": ["MANAGEMENT PRODUK"],
+    "features": ["REQUEST FITUR"],
     "redirect_link": "https://wa.me/6283133793060"
   }
 ]
