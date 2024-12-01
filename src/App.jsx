@@ -1,12 +1,4 @@
 import {
-  Navbar,
-  NavbarBrand,
-  NavbarContent,
-  NavbarItem,
-  Link,
-  Button,
-} from "@nextui-org/react";
-import {
   Dropdown,
   DropdownTrigger,
   DropdownMenu,
@@ -14,7 +6,10 @@ import {
 } from "@nextui-org/react";
 import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/react";
 import { Accordion, AccordionItem } from "@nextui-org/react";
-import { Chip } from "@nextui-org/react";
+import { Chip, Button, Link } from "@nextui-org/react";
+
+import MainNavbar from "./components/MainNavbar";
+import Category from "./components/Category";
 
 import "./App.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -22,67 +17,12 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 function App() {
   return (
     <>
-      <Navbar className="bg-transparent border-b border-gray-5300 sm:px-10">
-        <NavbarBrand>
-          <Link
-            href="#"
-            className="text-xl font-semibold text-black sm:text-2xl"
-          >
-            Abhiassa Studio
-          </Link>
-        </NavbarBrand>
-        <NavbarContent justify="center" className="hidden sm:flex">
-          <NavbarItem>
-            <Link href="#about">Tentang Kami</Link>
-          </NavbarItem>
-          <NavbarItem>
-            <Link href="#priceList">Daftar Harga</Link>
-          </NavbarItem>
-          <NavbarItem>
-            <Link href="#contacts">Kontak</Link>
-          </NavbarItem>
-          <NavbarItem>
-            <Link href="#faq">FAQ</Link>
-          </NavbarItem>
-        </NavbarContent>
-        <NavbarContent justify="end">
-          <NavbarItem>
-            <Button color="primary" className="hidden sm:flex">
-              Order
-            </Button>
-          </NavbarItem>
-          <Dropdown className="sm:hidden">
-            <DropdownTrigger className="sm:hidden">
-              <Button color="primary" className="sm:hidden">
-                <i className="bi bi-list text-2xl"></i>
-              </Button>
-            </DropdownTrigger>
-            <DropdownMenu aria-label="Static Actions">
-              <DropdownItem key="Home">
-                <Link href="#about">Tentang Kami</Link>
-              </DropdownItem>
-              <DropdownItem key="Home">
-                <Link href="#priceList">Daftar Harga</Link>
-              </DropdownItem>
-              <DropdownItem key="Home">
-                <Link href="#contacts">Kontak</Link>
-              </DropdownItem>
-              <DropdownItem key="Home">
-                <Link href="#faq">FAQ</Link>
-              </DropdownItem>
-            </DropdownMenu>
-          </Dropdown>
-        </NavbarContent>
-      </Navbar>
+      <MainNavbar />
+      <Category />
       <main className="px-5 sm:px-16">
         <section className="flex flex-col gap-10 mt-32 mb-[50vh] sm:mt-44">
-          <div className="flex justify-center items-center">
-            <Chip color="primary" variant="bordered" className="text-xs">
-              Dapatkan potongan harga di awal pemesanan
-            </Chip>
-          </div>
           <div className="flex flex-col justify-center items-center text-wrap text-center">
-            <h1 className="text-3xl font-semibold text-black tracking-wide sm:text-6xl">
+            <h1 className="text-3xl font-bold text-black tracking-wide sm:text-6xl">
               Mudahkan Pelanggan Dengan Website
             </h1>
             <p className="text-base font-normal text-black opacity-80 mt-2 sm:text-2xl">
@@ -102,7 +42,7 @@ function App() {
         </section>
         <section id="priceList">
           <div className="flex flex-col justify-center items-center">
-            <h1 className="text-2xl font-semibold text-black sm:text-3xl">
+            <h1 className="text-2xl font-bold text-black sm:text-3xl">
               Daftar Harga
             </h1>
             <div className="flex flex-col gap-10 mt-10 sm:grid sm:grid-cols-2">
