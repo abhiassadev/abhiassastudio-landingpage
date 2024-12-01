@@ -41,9 +41,7 @@ function MainNavbar() {
             </NavbarItem>
             <NavbarItem>
               <Link href="https://wa.me/6283133793060">
-                <Button color="primary" as="a">
-                  Order
-                </Button>
+                <Button color="primary">Order</Button>
               </Link>
             </NavbarItem>
           </div>

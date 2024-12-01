@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 import {
   Dropdown,
   DropdownTrigger,
@@ -15,6 +17,14 @@ import "./App.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 function App() {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetch("../data/packages.json")
+      .then((result) => result.json())
+      .then((data) => setData(data));
+  }, []);
+
   return (
     <>
       <MainNavbar />
@@ -32,7 +42,6 @@ function App() {
             <Link href="https://wa.me/6283133793060">
               <Button
                 color="primary"
-                as="a"
                 className="text-base font-medium mt-10 sm:h-12"
               >
                 Buat Sekarang
@@ -46,272 +55,67 @@ function App() {
               Daftar Harga
             </h1>
             <div className="flex flex-col gap-10 mt-10 sm:grid sm:grid-cols-2">
-              <Card className="p-3 sm:w-80">
-                <CardHeader className="flex-col items-start">
-                  <h1 className="text-md font-bold text-black opacity-80">
-                    LANDING PAGE
-                  </h1>
-                  <h1 className="text-2xl font-bold text-black">
-                    IDR 269.900/Tahun
-                  </h1>
-                  {/* <p className="text-sm font-normal text-black opacity-80 sm:text-sm">
-                    Di tahun pertama. 50.000/Tahun di tahun selanjutnya.
-                  </p> */}
-                </CardHeader>
-                <CardBody className="gap-3">
-                  <div className="flex items-center gap-2">
-                    <div className="bg-blue-500 w-5 h-5 flex justify-center items-center rounded-full">
-                      <i className="bi bi-check text-white"></i>
-                    </div>
-                    <p className="text-sm font-normal text-black opacity-80">
-                      OTOMATIS ONLINE
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="bg-blue-500 w-5 h-5 flex justify-center items-center rounded-full">
-                      <i className="bi bi-check text-white"></i>
-                    </div>
-                    <p className="text-sm font-normal text-black opacity-80">
-                      1 HALAMAN
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="bg-blue-500 w-5 h-5 flex justify-center items-center rounded-full">
-                      <i className="bi bi-check text-white"></i>
-                    </div>
-                    <p className="text-sm font-normal text-black opacity-80">
-                      TAMPILAN MODERN
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="bg-blue-500 w-5 h-5 flex justify-center items-center rounded-full">
-                      <i className="bi bi-check text-white"></i>
-                    </div>
-                    <p className="text-sm font-normal text-black opacity-80">
-                      DESAIN RESPONSIF 3 PERANGKAT
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="bg-blue-500 w-5 h-5 flex justify-center items-center rounded-full">
-                      <i className="bi bi-check text-white"></i>
-                    </div>
-                    <p className="text-sm font-normal text-black opacity-80">
-                      1 DOMAIN (.com)
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="bg-blue-500 w-5 h-5 flex justify-center items-center rounded-full">
-                      <i className="bi bi-check text-white"></i>
-                    </div>
-                    <p className="text-sm font-normal text-black opacity-80">
-                      Mobile Frendly
-                    </p>
-                  </div>
-                </CardBody>
-                <CardFooter>
-                  <Button color="primary" className="text-base font-medium">
-                    Order
-                  </Button>
-                </CardFooter>
-              </Card>
-              <Card className="p-3 sm:w-80">
-                <CardHeader className="flex-col items-start">
-                  <h1 className="text-md font-bold text-black opacity-80">
-                    E-COMMERCE
-                  </h1>
-                  <h1 className="text-2xl font-bold text-black">
-                    IDR 369.000/Tahun
-                  </h1>
-                </CardHeader>
-                <CardBody className="gap-3">
-                  <div className="flex items-center gap-2">
-                    <div className="bg-blue-500 w-5 h-5 flex justify-center items-center rounded-full">
-                      <i className="bi bi-check text-white"></i>
-                    </div>
-                    <p className="text-sm font-normal text-black opacity-80">
-                      OTOMATIS ONLINE
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="bg-blue-500 w-5 h-5 flex justify-center items-center rounded-full">
-                      <i className="bi bi-check text-white"></i>
-                    </div>
-                    <p className="text-sm font-normal text-black opacity-80">
-                      3 HALAMAN
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="bg-blue-500 w-5 h-5 flex justify-center items-center rounded-full">
-                      <i className="bi bi-check text-white"></i>
-                    </div>
-                    <p className="text-sm font-normal text-black opacity-80">
-                      TAMPILAN MODERN
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="bg-blue-500 w-5 h-5 flex justify-center items-center rounded-full">
-                      <i className="bi bi-check text-white"></i>
-                    </div>
-                    <p className="text-sm font-normal text-black opacity-80">
-                      DESAIN RESPONSIF 3 PERANGKAT
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="bg-blue-500 w-5 h-5 flex justify-center items-center rounded-full">
-                      <i className="bi bi-check text-white"></i>
-                    </div>
-                    <p className="text-sm font-normal text-black opacity-80">
-                      1 DOMAIN (.com)
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="bg-blue-500 w-5 h-5 flex justify-center items-center rounded-full">
-                      <i className="bi bi-check text-white"></i>
-                    </div>
-                    <p className="text-sm font-normal text-black opacity-80">
-                      Mobile Frendly
-                    </p>
-                  </div>
-                </CardBody>
-                <CardFooter className="gap-3">
-                  <Button color="primary" className="text-base font-medium">
-                    Order
-                  </Button>
-                  <Dropdown>
-                    <DropdownTrigger>
-                      <Button className="" variant="bordered">
-                        Fitur
-                      </Button>
-                    </DropdownTrigger>
-                    <DropdownMenu>
-                      <DropdownItem>
-                        <div className="flex items-center gap-2">
-                          <div className="bg-blue-500 w-5 h-5 flex justify-center items-center rounded-full">
-                            <i className="bi bi-check text-white"></i>
+              {data?.map((data) => {
+                return (
+                  <Card key={data.id} className="p-3 sm:w-80">
+                    <CardHeader className="flex-col items-start">
+                      <h1 className="text-md font-bold text-black opacity-80">
+                        {data.name}
+                      </h1>
+                      <h1 className="text-2xl font-bold text-black">
+                        IDR {data.price}/Tahun
+                      </h1>
+                    </CardHeader>
+                    <CardBody className="gap-3">
+                      {data.banefits.map((banefit, index) => {
+                        return (
+                          <div key={index} className="flex items-center gap-2">
+                            <div className="bg-blue-500 w-5 h-5 flex justify-center items-center rounded-full">
+                              <i className="bi bi-check text-white"></i>
+                            </div>
+                            <p className="text-sm font-normal text-black opacity-80">
+                              {banefit}
+                            </p>
                           </div>
-                          <p className="text-sm font-normal text-black opacity-80">
-                            Management Produk
-                          </p>
-                        </div>
-                      </DropdownItem>
-                      <DropdownItem>
-                        <div className="flex items-center gap-2">
-                          <div className="bg-blue-500 w-5 h-5 flex justify-center items-center rounded-full">
-                            <i className="bi bi-check text-white"></i>
-                          </div>
-                          <p className="text-sm font-normal text-black opacity-80">
-                            Pencarian Produk
-                          </p>
-                        </div>
-                      </DropdownItem>
-                      <DropdownItem>
-                        <div className="flex items-center gap-2">
-                          <div className="bg-blue-500 w-5 h-5 flex justify-center items-center rounded-full">
-                            <i className="bi bi-check text-white"></i>
-                          </div>
-                          <p className="text-sm font-normal text-black opacity-80">
-                            Kategori Produk
-                          </p>
-                        </div>
-                      </DropdownItem>
-                      <DropdownItem>
-                        <div className="flex items-center gap-2">
-                          <div className="bg-blue-500 w-5 h-5 flex justify-center items-center rounded-full">
-                            <i className="bi bi-check text-white"></i>
-                          </div>
-                          <p className="text-sm font-normal text-black opacity-80">
-                            Arahkan ke WhatsApp
-                          </p>
-                        </div>
-                      </DropdownItem>
-                    </DropdownMenu>
-                  </Dropdown>
-                </CardFooter>
-              </Card>
-              <Card className="p-3 sm:w-80">
-                <CardHeader className="flex-col items-start">
-                  <h1 className="text-md font-bold text-black opacity-80">
-                    KUSTOM
-                  </h1>
-                  <h1 className="text-2xl font-bold text-black">
-                    MENYESUAIKAN
-                  </h1>
-                </CardHeader>
-                <CardBody className="gap-3">
-                  <div className="flex items-center gap-2">
-                    <div className="bg-blue-500 w-5 h-5 flex justify-center items-center rounded-full">
-                      <i className="bi bi-check text-white"></i>
-                    </div>
-                    <p className="text-sm font-normal text-black opacity-80">
-                      OTOMATIS ONLINE
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="bg-blue-500 w-5 h-5 flex justify-center items-center rounded-full">
-                      <i className="bi bi-check text-white"></i>
-                    </div>
-                    <p className="text-sm font-normal text-black opacity-80">
-                      REQUEST HALAMAN
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="bg-blue-500 w-5 h-5 flex justify-center items-center rounded-full">
-                      <i className="bi bi-check text-white"></i>
-                    </div>
-                    <p className="text-sm font-normal text-black opacity-80">
-                      TAMPILAN MODERN
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="bg-blue-500 w-5 h-5 flex justify-center items-center rounded-full">
-                      <i className="bi bi-check text-white"></i>
-                    </div>
-                    <p className="text-sm font-normal text-black opacity-80">
-                      RESUEST PERANGKAT RESPONSIF
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="bg-blue-500 w-5 h-5 flex justify-center items-center rounded-full">
-                      <i className="bi bi-check text-white"></i>
-                    </div>
-                    <p className="text-sm font-normal text-black opacity-80">
-                      REQUEST DOMAIN
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="bg-blue-500 w-5 h-5 flex justify-center items-center rounded-full">
-                      <i className="bi bi-check text-white"></i>
-                    </div>
-                    <p className="text-sm font-normal text-black opacity-80">
-                      Mobile Frendly
-                    </p>
-                  </div>
-                </CardBody>
-                <CardFooter className="gap-3">
-                  <Button color="primary" className="text-base font-medium">
-                    Order
-                  </Button>
-                  <Dropdown>
-                    <DropdownTrigger>
-                      <Button className="" variant="bordered">
-                        Fitur
-                      </Button>
-                    </DropdownTrigger>
-                    <DropdownMenu>
-                      <DropdownItem>
-                        <div className="flex items-center gap-2">
-                          <div className="bg-blue-500 w-5 h-5 flex justify-center items-center rounded-full">
-                            <i className="bi bi-check text-white"></i>
-                          </div>
-                          <p className="text-sm font-normal text-black opacity-80">
-                            Request Fitur
-                          </p>
-                        </div>
-                      </DropdownItem>
-                    </DropdownMenu>
-                  </Dropdown>
-                </CardFooter>
-              </Card>
+                        );
+                      })}
+                    </CardBody>
+                    <CardFooter className="gap-3">
+                      <Link href={data.redirect_link}>
+                        <Button
+                          color="primary"
+                          className="text-base font-medium"
+                        >
+                          Order
+                        </Button>
+                      </Link>
+                      <Dropdown>
+                        <DropdownTrigger>
+                          <Button className="" variant="bordered">
+                            Fitur
+                          </Button>
+                        </DropdownTrigger>
+                        <DropdownMenu>
+                          {data.features?.map((feature, index) => {
+                            return (
+                              <DropdownItem key={index}>
+                                <div className="flex items-center gap-2">
+                                  <div className="bg-blue-500 w-5 h-5 flex justify-center items-center rounded-full">
+                                    <i className="bi bi-check text-white"></i>
+                                  </div>
+                                  <p className="text-sm font-normal text-black opacity-80">
+                                    {feature}
+                                  </p>
+                                </div>
+                              </DropdownItem>
+                            );
+                          })}
+                        </DropdownMenu>
+                      </Dropdown>
+                    </CardFooter>
+                  </Card>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -335,7 +139,7 @@ function App() {
                     Harga Terjangkau
                   </h1>
                   <p className="text-sm font-normal text-black opacity-80">
-                    Mulai dari Rp.100.000 anda sudah bisa memiliki Landing Page.
+                    Mulai dari Rp.269.900 anda sudah bisa memiliki Landing Page.
                   </p>
                 </CardBody>
               </Card>
@@ -380,7 +184,7 @@ function App() {
             <h1 className="text-2xl font-bold text-black sm:text-3xl">
               ABHIASSA STUDIO
             </h1>
-            <div className="flex flex-col gap-5 mt-10">
+            <div className="flex flex-col gap-5 mt-10 sm:grid sm:grid-cols-2">
               <Link href="" className="w-full">
                 <Card className="bg-gradient-to-tr from-blue-500 to-white h-32 w-full shadow-sm sm:w-64">
                   <CardBody className="flex justify-center items-center">

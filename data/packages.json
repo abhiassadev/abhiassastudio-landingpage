@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "name": "LANDING PAGE",
+    "price": 269.9,
+    "banefits": [
+      "OTOMATIS ONLINE",
+      "1 HALAMAN",
+      "TAMPILAN MODERN",
+      "DESAIN RESPONSIF 3 PERANGKAT",
+      "1 DOMAIN (.com)",
+      "MOBILE FRENDLY"
+    ],
+    "redirect_link": "https://wa.me/6283133793060"
+  },
+  {
+    "id": 1,
+    "name": "E-COMMERCE",
+    "price": 369.9,
+    "banefits": [
+      "OTOMATIS ONLINE",
+      "3 HALAMAN",
+      "TAMPILAN MODERN",
+      "DESAIN RESPONSIF 3 PERANGKAT",
+      "1 DOMAIN (.com)",
+      "MOBILE FRENDLY"
+    ],
+    "features": [
+      "MANAGEMENT PRODUK",
+      "PENCARIAN PRODUK",
+      "KATEGORI PRODUK",
+      "ARAHKAN KE WHATSAPP"
+    ],
+    "redirect_link": "https://wa.me/6283133793060"
+  },
+  {
+    "id": 1,
+    "name": "LANDING PAGE",
+    "price": "MENYESUAIKAN",
+    "banefits": [
+      "OTOMATIS ONLINE",
+      "REQUEST HALAMAN",
+      "REQUST TAMPILAN",
+      "REQUEST PERANGKAT RESPONSIF",
+      "KUSTOM DOMAIN (.com)",
+      "MOBILE FRENDLY"
+    ],
+    "features": ["MANAGEMENT PRODUK"],
+    "redirect_link": "https://wa.me/6283133793060"
+  }
+]
