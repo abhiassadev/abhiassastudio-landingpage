@@ -179,16 +179,13 @@ function App() {
         <section>
           <div className="mt-20 sm:text-center sm:mt-44">
             <p className="text-base font-medium text-black opacity-80 sm:text-lg">
-              Website Karya
+              Portofolio
             </p>
             <h1 className="text-2xl font-bold text-black sm:text-3xl">
               ABHIASSA STUDIO
             </h1>
             <div className="flex flex-col gap-5 mt-10 sm:grid sm:grid-cols-2">
-              <Link
-                href="https://tokoonlinebyabhiassa.netlify.app"
-                className="w-full"
-              >
+              <Link href="https://dreamour.vercel.app" className="w-full">
                 <Card className="bg-gradient-to-tr from-blue-500 to-white h-32 w-full shadow-sm sm:w-64">
                   <CardBody className="flex justify-center items-center">
                     <h1 className="text-2xl font-semibold text-white">
