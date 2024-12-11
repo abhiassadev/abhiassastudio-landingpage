@@ -10,7 +10,7 @@ import { Button, Link } from "@nextui-org/react";
 function PackageCard(props) {
   return (
     <>
-      <Card key={props.key} className="p-3 sm:w-80">
+      <Card className="p-3 sm:w-80">
         <CardHeader className="flex-col items-start">
           <h1 className="text-md font-semibold text-emerald-300">
             {props.packageName}
@@ -48,7 +48,7 @@ function PackageCard(props) {
                 return (
                   <DropdownItem key={index}>
                     <div className="flex items-center gap-2">
-                      <div className="bg-blue-500 w-5 h-5 flex justify-center items-center rounded-full">
+                      <div className="bg-emerald-400 w-5 h-5 flex justify-center items-center rounded-full">
                         <i className="bi bi-check text-white"></i>
                       </div>
                       <p className="text-sm font-normal text-black opacity-80">
@@ -65,5 +65,7 @@ function PackageCard(props) {
     </>
   );
 }
+
+PackageCard.PropTypes = {};
 
 export default PackageCard;

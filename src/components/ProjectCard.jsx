@@ -1,17 +1,10 @@
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Link,
-} from "@nextui-org/react";
+import { Card, CardBody, CardFooter, Link } from "@nextui-org/react";
 
 function ProjectCard(props) {
   return (
     <>
       <Link href={props.projectLink} className="w-full">
         <Card className="w-full sm:w-64">
-          {/* <CardHeader className=""></CardHeader> */}
           <CardBody className="">
             <img src={props.projectImage} className="rounded-lg" />
           </CardBody>

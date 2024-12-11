@@ -1,4 +1,4 @@
-import { Chip, Link, Button } from "@nextui-org/react";
+import { Chip, Link } from "@nextui-org/react";
 
 function MainNavbar() {
   return (
