@@ -1,73 +1,47 @@
-import {
-  Navbar,
-  NavbarBrand,
-  NavbarContent,
-  NavbarItem,
-  Link,
-  Button,
-} from "@nextui-org/react";
-import {
-  Dropdown,
-  DropdownTrigger,
-  DropdownMenu,
-  DropdownItem,
-} from "@nextui-org/react";
+import { Chip, Link, Button } from "@nextui-org/react";
 
 function MainNavbar() {
   return (
     <>
-      <Navbar className="bg-transparent border-b border-gray-5300 sm:px-10">
-        <NavbarBrand>
-          <Link
-            href="#"
-            className="text-xl font-semibold text-black sm:text-2xl"
-          >
+      <header className="bg-white flex flex-col justify-center gap-3 px-5 py-3">
+        <div>
+          <Link href="" className="text-lg font-semibold text-black">
             Abhiassa Studio
           </Link>
-        </NavbarBrand>
-        <NavbarContent justify="end">
-          <div className="hidden justify-center items-center gap-5 sm:flex">
-            <NavbarItem>
-              <Link href="#about">Tentang Kami</Link>
-            </NavbarItem>
-            <NavbarItem>
-              <Link href="#priceList">Daftar Harga</Link>
-            </NavbarItem>
-            <NavbarItem>
-              <Link href="#contacts">Kontak</Link>
-            </NavbarItem>
-            <NavbarItem>
-              <Link href="#faq">FAQ</Link>
-            </NavbarItem>
-            <NavbarItem>
-              <Link href="https://wa.me/6283133793060">
-                <Button color="primary">Order</Button>
+        </div>
+        <nav>
+          <ul className="flex gap-5">
+            <li>
+              <Link href="#">
+                <Chip className="bg-slate-100 text-sm font-medium text-black rounded-lg">
+                  Home
+                </Chip>
               </Link>
-            </NavbarItem>
-          </div>
-          <Dropdown className="sm:hidden">
-            <DropdownTrigger className="sm:hidden">
-              <Button color="primary" className="sm:hidden">
-                <i className="bi bi-list text-2xl"></i>
-              </Button>
-            </DropdownTrigger>
-            <DropdownMenu aria-label="Static Actions">
-              <DropdownItem key="Home">
-                <Link href="#about">Tentang Kami</Link>
-              </DropdownItem>
-              <DropdownItem key="Home">
-                <Link href="#priceList">Daftar Harga</Link>
-              </DropdownItem>
-              <DropdownItem key="Home">
-                <Link href="#contacts">Kontak</Link>
-              </DropdownItem>
-              <DropdownItem key="Home">
-                <Link href="#faq">FAQ</Link>
-              </DropdownItem>
-            </DropdownMenu>
-          </Dropdown>
-        </NavbarContent>
-      </Navbar>
+            </li>
+            <li>
+              <Link href="#pricing">
+                <Chip className="bg-slate-100 text-sm font-medium text-black rounded-lg">
+                  Pricing
+                </Chip>
+              </Link>
+            </li>
+            <li>
+              <Link href="#portofolio">
+                <Chip className="bg-slate-100 text-sm font-medium text-black rounded-lg">
+                  Portofolio
+                </Chip>
+              </Link>
+            </li>
+            <li>
+              <Link href="#faq">
+                <Chip className="bg-slate-100 text-sm font-medium text-black rounded-lg">
+                  Faq
+                </Chip>
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </header>
     </>
   );
 }
